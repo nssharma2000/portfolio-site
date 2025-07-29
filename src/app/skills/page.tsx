@@ -122,7 +122,7 @@ export default function Skills() {
           }
           <div id="franchise_message_box" className={`bg-gray-700 py-3 px-5 transition-opacity
             ${showFranchiseMessage ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} absolute left-[70%] top-[11vh] md:top-[15.5vh] z-[1000] duration-300 rounded-lg`}>
-            <div className="mx-auto text-[2vw] text-white">
+            <div className="mx-auto text-[4vw] md:text-[2vw] text-white">
               Change game franchise?
             </div>
           </div>

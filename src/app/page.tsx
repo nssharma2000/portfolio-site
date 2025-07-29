@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           }
           <div id="franchise_message_box" className={`bg-gray-700 py-3 px-5 transition-opacity
-            ${showFranchiseMessage ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} absolute left-[70%] top-[11vh] md:top-[15.5vh] duration-300 rounded-lg`}>
+            ${showFranchiseMessage ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} absolute left-[70%] top-[11vh] z-[1000] md:top-[15.5vh] duration-300 rounded-lg`}>
             <div className="mx-auto text-[2vw] text-white">
               Change game franchise?
             </div>
@@ -199,7 +199,7 @@ export default function Home() {
         </div>
         
         <div className={`w-[100%] mx-auto bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-slate-700 dark:to-slate-800`}>
-            <div className={`mx-auto text-center text-[2rem] animate-appearSmall md:text-[5rem] font-[Arial] font-bold`}>Naman Sharma</div>
+            <div className={`mx-auto text-center text-[2rem] animate-appearSmall md:text-[5rem] z-[-1] font-[Arial] font-bold`}>Naman Sharma</div>
             <div className="w-[100%] mx-auto text-center grid grid-cols-1 gap-4 mt-[10vh] items-center md:grid-cols-2">
               <div id="intro" className={`p-[3vw] w-[90%] order-2 md:order-1 md:w-[80%] animate-appearBig rounded-lg flex flex-col justify-center items-center text-center font-[Segoe_UI] text-[2rem] bgAnimate shadow-lg mx-auto bg-slate-100/80 dark:bg-gray-600/80`}>
                   

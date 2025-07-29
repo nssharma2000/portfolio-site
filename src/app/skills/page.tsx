@@ -5,17 +5,14 @@ import { Moon, Sun, HamburgerIcon, Hamburger, HamIcon, ListCollapse, Menu, Globe
 import { useTheme } from "next-themes";
 import { setTimeout } from "timers";
 import { useRef } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import DP from '../../public/DP.jpg'
-import MERN_logo from '../../public/MERN-logo.png'
 
 
 
 
 
 
-export default function Home() {  
+export default function Skills() {  
 
   const { theme, setTheme } = useTheme()
   
@@ -98,7 +95,9 @@ export default function Home() {
   }
 
   const hmItemStyle: string = `px-4 py-2 rounded-md text-center text-[2em] font-[Trebuchet_MS] font-semibold
-      hover:bg-red-500 hover:text-slate-100 transition-all duration-300 cursor-pointer` 
+      hover:bg-red-500 hover:text-slate-100 transition-all duration-300 cursor-pointer`
+      
+  const skillItemStyle: string = `w-[15vw] h-[18vw] md:w-[5vw] md:h-[8vw] flex flex-col justify-center items-center transition-transform duration-300 hover:scale-105 text-md md:text-2xl`
 
 
   return (
@@ -136,7 +135,7 @@ export default function Home() {
           </Link>
           <Link href="/projects" className={ navbarButtonStyle }>
             Projects
-          </Link>
+          </Link> 
           <Link href="/contact" className={ navbarButtonStyle }>
             Contact
           </Link>
@@ -198,36 +197,112 @@ export default function Home() {
 
         </div>
         
-        <div className={`w-[100%] mx-auto bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-slate-700 dark:to-slate-800`}>
-            <div className={`mx-auto text-center text-[2rem] animate-appearSmall md:text-[5rem] font-[Arial] font-bold`}>Naman Sharma</div>
-            <div className="w-[100%] mx-auto text-center grid grid-cols-1 gap-4 mt-[10vh] items-center md:grid-cols-2">
-              <div id="intro" className={`p-[3vw] w-[90%] order-2 md:order-1 md:w-[80%] animate-appearBig rounded-lg flex flex-col justify-center items-center text-center font-[Segoe_UI] text-[2rem] bgAnimate shadow-lg mx-auto bg-slate-100/80 dark:bg-gray-600/80`}>
-                  
-                  Hi! 👋 I'm a full-stack developer passionate about building modern and scalable systems as well as solving real world problems. With experience in MERN, I'm capable of building robust web apps that make an impact. I love coding and using Tailwind CSS for front-end development. Let's connect!
-              </div>
-              <div className="mx-auto order-1 md:order-2 animate-appearSmall">
-                <img src={ DP.src } className="w-[60vw] h-[60vw] rounded-lg shadow-lg shadow-gray-800/30 dark:shadow-gray-900/60 hover:scale-105 transition-transform duration-300 md:w-[30vw] md:h-[30vw]" />
-              </div>
-            </div>
+        <div className={`w-[100%] pt-[5%] mx-auto text-center bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-slate-700 dark:to-slate-800 transition-all duration-300`}>
+            <h1 className="text-4xl animate-appearBig transition-all duration-300 mx-auto font-semibold">
+              My Skills
+            </h1>
+            <br />
+            <div className="mx-auto w-[90vw] md:w-[80vw] mt-[5%] grid grid-cols-3 animate-appearBig gap-8 justify-items-center md:grid-cols-7 md:gap-16 grid-rows-auto transition-all duration-300">
 
-            <div className="text-center mt-[10vh] mx-auto py-8 text-[2em] md:text-[3em] font-semibold dark:text-white">
-              <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}>
-                  <div className="text-center">
-                  ⚙️ Main Tech Stack: MERN
-                  </div>
-              </motion.div>
-            </div>
-            <div className="mx-auto flex justify-center items-center text-center mt-[10%]">
-              <Globe className="w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]">
-              </Globe>
-              <div className="text-center ms-[1%] text-4xl md:text-3xl font-semibold">
-                India
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                alt="HTML5"
+                />
+                <div>
+                  HTML5
+                </div>
               </div>
-            </div>
-            <div className="mx-auto flex items-center justify-center mt-[10%] text-center w-[90vw] md:w-[80vw]">
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                alt="CSS"
+                />
+                <div>
+                  CSS
+                </div>
+              </div>
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+                />
+                <div>
+                JavaScript
+                </div>
+              </div>
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                alt="React"
+                />
+                <div>
+                  React
+                </div>
+              </div>
+              
+
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                alt="MySQL"
+                />
+                <div>
+                  MySQL
+                </div>
+              </div>
+
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                alt="C++"
+                />
+                <div>
+                  C++
+                </div>
+              </div>
+
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                alt="Python"
+                />
+                <div>
+                  Python
+                </div>
+              </div>
+
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                alt="Java"
+                />
+                <div>
+                  Java
+                </div>
+              </div>
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+                alt="FastAPI"
+                />
+                <div>
+                  FastAPI
+                </div>
+              </div>
+              
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                alt="GitHub"
+                />
+                <div>
+                  GitHub
+                </div>
+              </div>
+          </div>
+
+        <div className="mx-auto flex items-center justify-center mt-[10%] text-center w-[90vw] md:w-[80vw]">
               <a href="https://www.github.com/nssharma2000">
               <Github className="w-[10vw] h-[10vw] md:w-[2vw] md:h-[2vw]"></Github>
               </a>

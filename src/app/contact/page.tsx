@@ -1,7 +1,7 @@
 "use client";
 
 import { Ref, useEffect, useState } from "react";
-import { Moon, Sun, HamburgerIcon, Hamburger, HamIcon, ListCollapse, Menu, Globe, CatIcon, Github, Linkedin, LinkedinIcon, LucideLinkedin } from "lucide-react";
+import { Moon, Sun, HamburgerIcon, Hamburger, HamIcon, ListCollapse, Menu, Globe, CatIcon, Github, Linkedin, LinkedinIcon, LucideLinkedin, MailIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { setTimeout } from "timers";
 import { useRef } from "react";
@@ -15,7 +15,7 @@ import MERN_logo from '../../public/MERN-logo.png'
 
 
 
-export default function Home() {  
+export default function Contact() {  
 
   const { theme, setTheme } = useTheme()
   
@@ -198,40 +198,18 @@ export default function Home() {
 
         </div>
         
-        <div className={`w-[100%] mx-auto bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-slate-700 dark:to-slate-800`}>
-            <div className={`mx-auto text-center text-[2rem] animate-appearSmall md:text-[5rem] font-[Arial] font-bold`}>Naman Sharma</div>
-            <div className="w-[100%] mx-auto text-center grid grid-cols-1 gap-4 mt-[10vh] items-center md:grid-cols-2">
-              <div id="intro" className={`p-[3vw] w-[90%] order-2 md:order-1 md:w-[80%] animate-appearBig rounded-lg flex flex-col justify-center items-center text-center font-[Segoe_UI] text-[2rem] bgAnimate shadow-lg mx-auto bg-slate-100/80 dark:bg-gray-600/80`}>
-                  
-                  Hi! 👋 I'm a full-stack developer passionate about building modern and scalable systems as well as solving real world problems. With experience in MERN, I'm capable of building robust web apps that make an impact. I love coding and using Tailwind CSS for front-end development. Let's connect!
-              </div>
-              <div className="mx-auto order-1 md:order-2 animate-appearSmall">
-                <img src={ DP.src } className="w-[60vw] h-[60vw] rounded-lg shadow-lg shadow-gray-800/30 dark:shadow-gray-900/60 hover:scale-105 transition-transform duration-300 md:w-[30vw] md:h-[30vw]" />
-              </div>
-            </div>
-
-            <div className="text-center mt-[10vh] mx-auto py-8 text-[2em] md:text-[3em] font-semibold dark:text-white">
-              <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}>
-                  <div className="text-center">
-                  ⚙️ Main Tech Stack: MERN
-                  </div>
-              </motion.div>
-            </div>
-            <div className="mx-auto flex justify-center items-center text-center mt-[10%]">
-              <Globe className="w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]">
-              </Globe>
-              <div className="text-center ms-[1%] text-4xl md:text-3xl font-semibold">
-                India
-              </div>
+        <div className={`w-[100%] h-screen mx-auto bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-slate-700 dark:to-slate-800`}>
+            <div className="w-[80%] pt-[10vh] md:w-[30%] mx-auto flex justify-around items-center">
+                <MailIcon className="w-[5vw] h-[5vw] md:w-[2vw] md:h-[2vw]"></MailIcon>
+                <div className="text-lg md:text-3xl font-medium">
+                ns.sharma.2000@gmail.com
+                </div>
             </div>
             <div className="mx-auto flex items-center justify-center mt-[10%] text-center w-[90vw] md:w-[80vw]">
               <a href="https://www.github.com/nssharma2000">
               <Github className="w-[10vw] h-[10vw] md:w-[2vw] md:h-[2vw]"></Github>
               </a>
-              <a href="https://www.github.com/nssharma2000" className="text-center ms-[2%] font-semibold text-4xl md:text-3xl">
+              <a className="text-center ms-[2%] font-semibold text-4xl md:text-3xl">
                 GitHub
               </a>
             </div>

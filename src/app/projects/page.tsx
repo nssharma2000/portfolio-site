@@ -1,21 +1,21 @@
 "use client";
 
-import { Ref, useEffect, useState } from "react";
+import { ComponentProps, Ref, useEffect, useState } from "react";
 import { Moon, Sun, HamburgerIcon, Hamburger, HamIcon, ListCollapse, Menu, Globe, CatIcon, Github, Linkedin, LinkedinIcon, LucideLinkedin } from "lucide-react";
 import { useTheme } from "next-themes";
 import { setTimeout } from "timers";
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import MS from "../../../public/MusiSense.png"
+import GT from "../../../public/Games Today.png"
+import VG from "../../../public/VGQT.png"
 import Link from "next/link";
-import DP from '../../public/DP.jpg'
-import MERN_logo from '../../public/MERN-logo.png'
+import { StaticImageData } from "next/image";
 
 
 
 
 
-
-export default function Home() {  
+export default function Projects() {  
 
   const { theme, setTheme } = useTheme()
   
@@ -83,7 +83,62 @@ export default function Home() {
   };
 
 
-  
+
+  const projects = [
+    {
+      title: "MusiSense.ai",
+      src: MS.src,
+      url: "https://musisenseai.vercel.app",
+      github: "https://github.com/nssharma2000/MusiSense.ai",
+      description: "Music recommendation app that uses AI to recommend songs and music based on the user's preferences or mood."
+    },
+    {
+      title: "Games Today",
+      src: GT.src,
+      url: "https://mern-blog-front-end-edeu.onrender.com/",
+      github: "https://github.com/nssharma2000/MERN-Blog",
+      description: "A gaming blog website where the user can create an account and comment on blog posts."
+    },
+    {
+      title: "Video Game Quiz Time!",
+      src: VG.src,
+      url: "https://videogamequiztime.netlify.app/",
+      github: "https://github.com/nssharma2000/Video-Game-Quiz-Time",
+      description: "A quiz about Mario and Sonic video games where the user can answer questions and check their score at the end."
+    } 
+  ]
+
+  type projectType = {
+    title: string,
+    src: string | Blob | undefined,
+    url: string,
+    github: string,
+    description: string
+  }
+
+  function Project({ project }: { project: projectType })
+  {
+    return(
+      <div className="mx-auto rounded-lg w-[90%] h-[70vh] md:h-[60vh] flex flex-col justify-around items-center px-3 py-2 bg-slate-200 transition-all hover:scale-105 duration-300 shadow-lg">
+        <div className="w-[80%] mx-auto flex justify-center items-start h-[20vh] md:h-[23vh]">
+        <a href={ project.url }>
+          <img src={ project.src } className="h-[23vh] object-cover" />
+        </a>
+        </div>
+        <br />
+        <div className="w-[80%] mx-auto text-justify text-xl font-semibold md:text-lg">
+          { project.description }
+        </div>
+        <br />
+        <div className="w-[40%] text-center flex justify-around items-center text-xl font-medium md:text-lg">
+          <a href={ project.github } className="flex gap-2">
+          <Github></Github>
+          GitHub
+          </a> 
+        </div>
+      </div>
+    )
+  }
 
   
 
@@ -100,6 +155,8 @@ export default function Home() {
   const hmItemStyle: string = `px-4 py-2 rounded-md text-center text-[2em] font-[Trebuchet_MS] font-semibold
       hover:bg-red-500 hover:text-slate-100 transition-all duration-300 cursor-pointer` 
 
+
+  
 
   return (
     <div id="main_container" className="w-full mx-auto">
@@ -199,39 +256,19 @@ export default function Home() {
         </div>
         
         <div className={`w-[100%] mx-auto bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-slate-700 dark:to-slate-800`}>
-            <div className={`mx-auto text-center text-[2rem] animate-appearSmall md:text-[5rem] font-[Arial] font-bold`}>Naman Sharma</div>
-            <div className="w-[100%] mx-auto text-center grid grid-cols-1 gap-4 mt-[10vh] items-center md:grid-cols-2">
-              <div id="intro" className={`p-[3vw] w-[90%] order-2 md:order-1 md:w-[80%] animate-appearBig rounded-lg flex flex-col justify-center items-center text-center font-[Segoe_UI] text-[2rem] bgAnimate shadow-lg mx-auto bg-slate-100/80 dark:bg-gray-600/80`}>
-                  
-                  Hi! 👋 I'm a full-stack developer passionate about building modern and scalable systems as well as solving real world problems. With experience in MERN, I'm capable of building robust web apps that make an impact. I love coding and using Tailwind CSS for front-end development. Let's connect!
-              </div>
-              <div className="mx-auto order-1 md:order-2 animate-appearSmall">
-                <img src={ DP.src } className="w-[60vw] h-[60vw] rounded-lg shadow-lg shadow-gray-800/30 dark:shadow-gray-900/60 hover:scale-105 transition-transform duration-300 md:w-[30vw] md:h-[30vw]" />
-              </div>
+            <div className="w-[80%] pt-[10vh] animate-appearBig mx-auto grid grid-cols-1 gap-6 md:grid-cols-3">
+              {
+                projects.map((project, key) =>
+                  <Project key={key} project={ project }></Project>
+                )
+              }
             </div>
-
-            <div className="text-center mt-[10vh] mx-auto py-8 text-[2em] md:text-[3em] font-semibold dark:text-white">
-              <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}>
-                  <div className="text-center">
-                  ⚙️ Main Tech Stack: MERN
-                  </div>
-              </motion.div>
-            </div>
-            <div className="mx-auto flex justify-center items-center text-center mt-[10%]">
-              <Globe className="w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]">
-              </Globe>
-              <div className="text-center ms-[1%] text-4xl md:text-3xl font-semibold">
-                India
-              </div>
-            </div>
+            
             <div className="mx-auto flex items-center justify-center mt-[10%] text-center w-[90vw] md:w-[80vw]">
               <a href="https://www.github.com/nssharma2000">
               <Github className="w-[10vw] h-[10vw] md:w-[2vw] md:h-[2vw]"></Github>
               </a>
-              <a href="https://www.github.com/nssharma2000" className="text-center ms-[2%] font-semibold text-4xl md:text-3xl">
+              <a className="text-center ms-[2%] font-semibold text-4xl md:text-3xl">
                 GitHub
               </a>
             </div>
@@ -252,6 +289,7 @@ export default function Home() {
                   </button>
                 </a>
             </div>
+
 
         </div>
         

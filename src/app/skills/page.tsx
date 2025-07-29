@@ -104,7 +104,7 @@ export default function Skills() {
     <div id="main_container" className="w-full mx-auto">
       <div id="wrapper" className="w-full mx-auto">
         { isMenuShown &&
-          <div id="hamburger_menu" className={`absolute right-0 ${theme2 === "m" ? "bg-red-100 dark:bg-red-600" : "bg-blue-100 bg-blue-600" } top-[10vh] w-[40vw] rounded-md animate-fadeIn transition-all duration-100 p-2 z-[100] flex flex-col justify-center gap-2`}
+          <div id="hamburger_menu" className={`absolute right-0 ${theme2 === "m" ? "bg-red-100 dark:bg-red-600" : "bg-blue-100 dark:bg-blue-600" } top-[10vh] w-[40vw] rounded-md animate-fadeIn transition-all duration-100 p-2 z-[100] flex flex-col justify-center gap-2`}
           ref={ menuRef }>
             <Link href="/" className={ hmItemStyle }>
               About

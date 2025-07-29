@@ -119,7 +119,7 @@ export default function Projects() {
   function Project({ project }: { project: projectType })
   {
     return(
-      <div className="mx-auto rounded-lg w-[90%] h-[70vh] md:h-[60vh] flex flex-col justify-around items-center px-3 py-2 bg-slate-200 transition-all hover:scale-105 duration-300 shadow-lg">
+      <div className="mx-auto rounded-lg w-[90%] h-[70vh] lg:h-[80vh] xl:h-[60vh] flex flex-col justify-around items-center px-3 py-2 bg-slate-200 transition-all hover:scale-105 duration-300 shadow-lg">
         <div className="w-[80%] mx-auto flex justify-center items-start h-[20vh] md:h-[23vh]">
         <a href={ project.url }>
           <img src={ project.src } className="h-[23vh] object-cover" />

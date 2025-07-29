@@ -177,7 +177,7 @@ export default function Home() {
                     }
                     </div>
                     :
-                    <div className={`w-[70%] h-[90%] text-center mx-auto ${theme2 === "s" ? "text-blue-500" : "text-red-500" } flex justify-center items-center font-[Calibri] text-[3vw] cursor-pointer`}>
+                    <div className={`w-[70%] h-[90%] text-center mx-auto ${theme2 === "s" ? "text-blue-500" : "text-red-500" } flex justify-center items-center font-[Calibri] text-[5vw] md:text-[3vw] cursor-pointer`}>
                     {
                       theme2 === "m" ?
                       <>

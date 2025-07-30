@@ -60,10 +60,18 @@ export default function Home() {
     if(theme2 === "m")
     {
       setTheme2("s")
+      if (typeof window !== 'undefined' && window.localStorage)
+      {
+        localStorage.setItem("theme2", "s")
+      }
     }
     else
     {
       setTheme2("m")
+      if (typeof window !== 'undefined' && window.localStorage)
+      { 
+        localStorage.setItem("theme2", "m")
+      }
     }
   }
 

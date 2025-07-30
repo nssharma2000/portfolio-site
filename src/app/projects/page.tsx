@@ -56,6 +56,19 @@ export default function Projects() {
     }
   }, [])
 
+
+  useEffect(() => {
+  if (typeof window !== 'undefined') {
+    const savedTheme = localStorage.getItem("theme2")
+    if (savedTheme) {
+      setTheme2(savedTheme)
+    } else {
+      setTheme2("m") 
+      localStorage.setItem("theme2", "m")
+    }
+  }
+}, [])
+
   const toggleTheme2 = () => {
     if(theme2 === "m")
     {

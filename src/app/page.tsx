@@ -26,7 +26,7 @@ export default function Home() {
 
   const [mounted, setMounted] = useState(false)
 
-  const [theme2, setTheme2] = useState<string | null>(localStorage.getItem("theme2"))
+  const [theme2, setTheme2] = useState<string | null>(null)
 
   const [showFranchiseMessage, setShowFranchiseMessage] = useState(false)
 
@@ -55,6 +55,20 @@ export default function Home() {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [])
+
+
+
+  useEffect(() => {
+  if (typeof window !== 'undefined') {
+    const savedTheme = localStorage.getItem("theme2")
+    if (savedTheme) {
+      setTheme2(savedTheme)
+    } else {
+      setTheme2("m")
+      localStorage.setItem("theme2", "m")
+    }
+  }
+}, [])
 
   const toggleTheme2 = () => {
     if(theme2 === "m")

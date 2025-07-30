@@ -60,10 +60,12 @@ export default function Contact() {
     if(theme2 === "m")
     {
       setTheme2("s")
+      localStorage.setItem("theme2", "s")
     }
     else
     {
       setTheme2("m")
+      localStorage.setItem("theme2", "m")
     }
   }
 

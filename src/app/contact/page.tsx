@@ -64,9 +64,12 @@ export default function Contact() {
       {
       localStorage.setItem("theme2", "s")
       }
-      else
+    }
+    else
+    {
+      setTheme2("m")
+      if (typeof window !== 'undefined' && window.localStorage)
       {
-        setTheme2("m")
         localStorage.setItem("theme2", "m")
       }
     }

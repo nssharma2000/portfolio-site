@@ -23,7 +23,7 @@ export default function Skills() {
 
   const [mounted, setMounted] = useState(false)
 
-  const [theme2, setTheme2] = useState<string>("m")
+  const [theme2, setTheme2] = useState<string | null>(localStorage.getItem("theme2"))
 
   const [showFranchiseMessage, setShowFranchiseMessage] = useState(false)
 

@@ -261,6 +261,38 @@ export default function Skills() {
                   React
                 </div>
               </div>
+
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                alt="React"
+                />
+                <div>
+                  Node.js
+                </div>
+              </div>
+
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                alt="React"
+                />
+                <div>
+                  Express.js
+                </div>
+              </div>
+
+              <div className={ skillItemStyle }>
+                <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+                alt="React"
+                />
+                <div>
+                  MongoDB
+                </div>
+              </div>
+
+              
               
 
               <div className={ skillItemStyle }>
